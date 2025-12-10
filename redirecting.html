@@ -24,7 +24,14 @@
     </div>
 
     <!-- Step 4: Redirecting text -->
-    <h2 class="redirect-text">Redirecting to website ...</h2>
+    <h2 class="redirect-text">Redirecting to website...</h2>
   </div>
+
+  <script>
+    // setelah teks "Redirecting..." muncul, tunggu 2 detik lalu pindah ke datacenter.html
+    setTimeout(() => {
+      window.location.href = "datacenter.html";
+    }, 23000); // total animasi sampai redirect-text muncul (21s) + jeda 2s
+  </script>
 </body>
 </html>
