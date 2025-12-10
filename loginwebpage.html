@@ -18,9 +18,7 @@
       </div>
 
       <h2 class="login-title">Sign In</h2>
-      <!-- langsung submit ke Apps Script Web App -->
-      <form class="login-form" id="login-form" method="POST"
-            action="https://script.google.com/macros/s/AKfycbzEToLcYfIVNEtGyZ_9PjttN150ej9fBr8bR2oct4KuoIBjsLlhOSp8s7ScC9FTpKsckA/exec">
+      <form class="login-form" id="login-form">
         <div class="form-group">
           <label for="username">Username</label>
           <input name="username" id="username" type="text" placeholder="Enter username" required>
@@ -31,9 +29,7 @@
           <input name="password" id="password" type="password" placeholder="Enter password" required>
         </div>
 
-        <!-- hidden field untuk action -->
         <input type="hidden" name="action" value="login">
-
         <button type="submit" class="btn">Login</button>
       </form>
 
@@ -46,4 +42,3 @@
   <script src="datacenter.js"></script>
 </body>
 </html>
-
