@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const accounts = {
       "Rasya Farozan Hunata": "501251043",
       "Revan Al Haviz": "501251042",
-      "Davin Dio Pratama": "50125141"
+      "Davin Dio Pratama": "501251041"
     };
 
     if (accounts[username] && accounts[username] === password) {
