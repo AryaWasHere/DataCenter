@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Players</title>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="players.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">DC</div>
+        <div class="brand-text">
+          <h1>Data Center</h1>
+          <div class="muted">Player Database</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="datacenter.html" class="menu-item">📡 Data Center</a>
+        <a href="console.html" class="menu-item">📊 Job Analytics</a>
+        <a href="players.html" class="menu-item active">👥 Players</a>
+        <a href="database.html" class="menu-item">📂 Database Folder</a>
+        <a href="backups.html" class="menu-item">🗄️ Backups</a>
+      </nav>
+
+      <footer class="sb-foot">v1 • Built for Database</footer>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="page-title">Players</h2>
+          <div id="page-sub" class="muted">Explorer / Player list</div>
+        </div>
+
+        <div class="status">
+          <div class="muted">Server Status</div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div id="dc-dot" class="dot offline"></div>
+            <div id="dc-status" class="muted">disconnected</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Player List -->
+      <section id="players-pane" class="pane">
+        <div class="card big">
+          <h3>Player List</h3>
+          <table class="player-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Job</th>
+              </tr>
+            </thead>
+            <tbody id="player-list">
+              <!-- JS inject rows here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Summary -->
+      <section id="summary-pane" class="pane">
+        <div class="cards">
+          <div class="card">
+            <h3>Total Jobs</h3>
+            <p id="total-jobs">0</p>
+          </div>
+          <div class="card">
+            <h3>Most Popular Job</h3>
+            <p id="popular-job">-</p>
+          </div>
+          <div class="card">
+            <h3>Least Popular Job</h3>
+            <p id="least-job">-</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Charts -->
+      <section id="charts-pane" class="pane">
+        <div class="card big">
+          <h3>Job Distribution</h3>
+          <canvas id="jobPie"></canvas>
+        </div>
+        <div class="card big">
+          <h3>Job Trends</h3>
+          <canvas id="jobLine"></canvas>
+        </div>
+      </section>
+
+      <!-- Controls -->
+      <section id="controls" class="pane small">
+        <div class="card">
+          <h3>Quick Actions</h3>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button id="reload" class="btn">Reload</button>
+            <a href="database.html" class="btn ghost">Go to Database Folder</a>
+            <a href="backups.html" class="btn ghost">Go to Backups</a>
+          </div>
+          <div class="muted" style="margin-top:10px">API endpoint: <code id="api-url"></code></div>
+        </div>
+      </section>
+
+      <footer style="margin-top:16px" class="muted">Built for Database • Replace API URL in players.js</footer>
+    </main>
+  </div>
+
+  <script src="players.js"></script>
+</body>
+</html>

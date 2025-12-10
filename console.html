@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Job Analytics</title>
+  <link rel="stylesheet" href="console.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">DC</div>
+        <div class="brand-text">
+          <h1>Data Center</h1>
+          <div class="muted">Player Database</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="datacenter.html" class="menu-item" data-page="home">📡 Data Center</a>
+        <a href="jobanalytics.html" class="menu-item active" data-page="analytics">📊 Job Analytics</a>
+        <a href="players.html" class="menu-item" data-page="players">👥 Players</a>
+        <a href="database.html" class="menu-item" data-page="database">📂 Database Folder</a>
+        <a href="backups.html" class="menu-item" data-page="backups">🗄️ Backups</a>
+      </nav>
+
+      <footer class="sb-foot">v1 • Built for Database</footer>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="page-title">Job Analytics</h2>
+          <div id="page-sub" class="muted">Explorer / Player & Job folders</div>
+        </div>
+
+        <!-- Popup Modal -->
+        <div id="popup" class="popup hidden">
+          <div class="popup-content">
+            <span id="popup-close" class="popup-close">&times;</span>
+            <h3 id="popup-title">Detail</h3>
+            <ul id="popup-list" class="popup-list"></ul>
+          </div>
+        </div>
+
+        <div class="status">
+          <div class="muted">Server Status</div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div id="dc-dot" class="dot offline"></div>
+            <div id="dc-status" class="muted">disconnected</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Explorer Pane -->
+      <section id="explorer-pane" class="pane">
+        <div class="cards">
+          <div class="card big">
+            <h3>Player Explorer</h3>
+            <div id="player-folders" class="folder-list">
+              <!-- JS inject player folders here -->
+            </div>
+          </div>
+
+          <div class="card big">
+            <h3>Job Explorer</h3>
+            <div id="job-folders" class="folder-list">
+              <!-- JS inject job folders here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Controls -->
+      <section id="controls" class="pane small">
+        <div class="card">
+          <h3>Quick Actions</h3>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button id="reload" class="btn">Reload</button>
+            <button id="export-json" class="btn ghost">Export JSON</button>
+          </div>
+          <div class="muted" style="margin-top:10px">
+            API endpoint: <code id="api-url"></code>
+          </div>
+        </div>
+      </section>
+
+      <footer style="margin-top:16px" class="muted">
+        Built for Database • Replace API URL in console.js
+      </footer>
+    </main>
+  </div>
+
+  <script src="console.js"></script>
+</body>
+</html>
