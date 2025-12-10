@@ -20,6 +20,7 @@ async function handleLogin(e) {
     const response = await fetch(API_URL, {
       method: "POST",
       body: formData
+      // tanpa headers → dianggap simple request → lolos CORS
     });
 
     const data = await response.json();
@@ -36,8 +37,5 @@ async function handleLogin(e) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("login-form");
-  if (form) {
-    form.addEventListener("submit", handleLogin);
-  }
+  document.getElementById("login-form").addEventListener("submit", handleLogin);
 });
