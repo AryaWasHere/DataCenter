@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("login-form");
 
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const username = document.getElementById("username").value.trim();
@@ -14,12 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
       "Davin Dio Pratama": "501251041"
     };
 
+    // elemen untuk pesan error
+    let errorBox = document.getElementById("error-box");
+    if (!errorBox) {
+      errorBox = document.createElement("div");
+      errorBox.id = "error-box";
+      errorBox.style.color = "red";
+      errorBox.style.marginTop = "10px";
+      form.appendChild(errorBox);
+    }
+
     if (accounts[username] && accounts[username] === password) {
       // login sukses → redirect
       window.location.href = "redirecting.html";
     } else {
-      // login gagal
-      alert("Login failed: Invalid username or password");
+      // login gagal → tampilkan pesan
+      errorBox.textContent = "Login failed: Invalid username or password";
     }
   });
 });
