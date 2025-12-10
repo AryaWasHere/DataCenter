@@ -14,14 +14,16 @@ async function handleLogin(e) {
   }
 
   try {
+    // kirim data sebagai form-urlencoded
+    const formData = new URLSearchParams();
+    formData.append("action", "login");
+    formData.append("username", username);
+    formData.append("password", password);
+
     const response = await fetch(API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        action: "login",
-        username: username,
-        password: password
-      })
+      body: formData
+      // tidak perlu headers → biar dianggap simple request
     });
 
     if (!response.ok) {
