@@ -18,16 +18,21 @@
       </div>
 
       <h2 class="login-title">Sign In</h2>
-      <form class="login-form" id="login-form">
+      <!-- langsung submit ke Apps Script Web App -->
+      <form class="login-form" id="login-form" method="POST"
+            action="https://script.google.com/macros/s/AKfycbzEToLcYfIVNEtGyZ_9PjttN150ej9fBr8bR2oct4KuoIBjsLlhOSp8s7ScC9FTpKsckA/exec">
         <div class="form-group">
           <label for="username">Username</label>
-          <input id="username" type="text" placeholder="Enter username" required>
+          <input name="username" id="username" type="text" placeholder="Enter username" required>
         </div>
 
         <div class="form-group">
           <label for="password">Password</label>
-          <input id="password" type="password" placeholder="Enter password" required>
+          <input name="password" id="password" type="password" placeholder="Enter password" required>
         </div>
+
+        <!-- hidden field untuk action -->
+        <input type="hidden" name="action" value="login">
 
         <button type="submit" class="btn">Login</button>
       </form>
@@ -37,8 +42,5 @@
       </p>
     </div>
   </div>
-
-  <!-- Hubungkan ke file JS eksternal -->
-  <script src="loginwebpage.js"></script>
 </body>
 </html>
