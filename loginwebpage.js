@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "Rasya Farozan Hunata": "501251043",
       "Revan Al Haviz": "501251042",
       "Davin Dio Pratama": "501251041"
+      "Hanzu Takanashii": "501251051"
+      "Arya Dewa Pamungkas": "501251052"
     };
 
     // elemen untuk pesan error
