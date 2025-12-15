@@ -3,11 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
+  
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
-
-    // daftar akun valid
     const accounts = {
       "Rasya Farozan Hunata": "501251043",
       "Revan Al Haviz": "501251042",
@@ -27,10 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (accounts[username] && accounts[username] === password) {
-      // login sukses → redirect
       window.location.href = "redirecting.html";
     } else {
-      // login gagal → tampilkan pesan
       errorBox.textContent = "Login failed: Invalid username or password";
     }
   });
