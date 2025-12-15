@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
+
+    console.log(Username input:", username);
+    console.log(Password input:", password);
+      
     const accounts = {
       "Rasya Farozan Hunata": "501251043",
       "Revan Al Haviz": "501251042",
@@ -14,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Arya Dewa Pamungkas": "501251052",
     };
 
-    // elemen untuk pesan error
+    console.log("Password match:", accounts[username] == password);
     let errorBox = document.getElementById("error-box");
     if (!errorBox) {
       errorBox = document.createElement("div");
