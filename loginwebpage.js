@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Password input:", password);
 
     const accounts = {
-      "rasyafarozanhunata": "501251043",
-      "revanalhaviz": "501251042",
-      "davindiopratama": "501251041",
-      "hanzutakanashii": "501251051",
-      "aryadewapamungkas": "501251052",
+      "rasyafarozanhunata": "501251045",
+      "revanalhaviz": "501251044",
+      "davindiopratama": "501251043",
+      "hanzutakanashii": "501251042",
+      "aryadewapamungkas": "501251041",
       "admin": "admin",
     };
 
