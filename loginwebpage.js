@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(Password input:", password);
       
     const accounts = {
-      "Rasya Farozan Hunata": "501251043",
-      "Revan Al Haviz": "501251042",
-      "Davin Dio Pratama": "501251041",
-      "Hanzu Takanashii": "501251051",
-      "Arya Dewa Pamungkas": "501251052",
+        "rasya farozan hunata": "501251043",
+        "revan al haviz": "501251042",
+        "davin dio pratama": "501251041",
+        "hanzu takanashii": "501251051",
+        "arya dewa pamungkas": "501251052",
     };
 
     console.log("Password match:", accounts[username] == password);
