@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "davindiopratama": "501251043",
       "hanzutakanashii": "501251042",
       "aryadewapamungkas": "501251041",
+      "galihsaptamulya": "501251040",
       "admin": "admin",
     };
 
