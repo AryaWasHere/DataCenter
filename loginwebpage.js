@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "aryadewapamungkas": "501251041",
       "galihsaptamulya": "501251040",
       "admin": "admin",
+      "guest": "guest",
     };
 
     console.log("Password match:", accounts[username] === password);
